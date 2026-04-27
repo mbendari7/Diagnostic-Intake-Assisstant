@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnostic Intake Portal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="master-column">
+        <h1>System Diagnostic Triage</h1>
+
+        <div id="initial-intake-wrapper" class="intake-panel">
+            <form id="intake-form">
+                <div class="form-group">
+                    <label for="complaint">Describe your system's current failure</label>
+                    <textarea id="complaint" name="complaint" rows="5" required placeholder="Describe the failure conditions..."></textarea>
+                </div>
+                <button type="submit" id="submit-btn">Execute Diagnostics Scan</button>
+            </form>
+        </div>
+
+        <div id="status-panel">
+            <div id="loading-indicator">
+                > [Initialize] Processing request... <br>
+                > [Harvest] Executing local telemetry scan... <br>
+                > [Triage] Awaiting AI expert analysis...
+            </div>
+        </div>
+
+        <div id="diagnostic-feed"></div>
+
+        <div id="follow-up-container" style="display: none;">
+            <div class="follow-up-panel">
+                <h3>Do you need more help with this diagnosis?</h3>
+                <form id="follow-up-form">
+                    <textarea id="follow-up-text" name="message" rows="2" placeholder="Ask a follow-up question..." required></textarea>
+                    <button type="submit" id="follow-up-btn">Send Reply</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>

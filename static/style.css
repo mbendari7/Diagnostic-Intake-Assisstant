@@ -1,0 +1,170 @@
+:root {
+    --bg-main: #f6f8fa; 
+    --gh-bg-main: #ffffff; 
+    --gh-border: #d0d7de; 
+    --gh-accent: #0969da; 
+    --gh-accent-hover: #03449e; 
+    --gh-heading: #1f2328; 
+    --gh-muted: #6e7781; 
+    --mono-font: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; 
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--gh-heading);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+}
+
+.master-column {
+    max-width: 850px;
+    width: 100%;
+    margin: 40px auto;
+    padding: 20px;
+    padding-bottom: 100px; /* Space for the bottom chat box */
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 2.2em;
+    border-bottom: 1px solid var(--gh-border);
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+}
+
+.intake-panel, #status-panel, .follow-up-panel {
+    background-color: var(--gh-bg-main);
+    border: 1px solid var(--gh-border);
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+    margin-bottom: 25px;
+}
+
+.form-group { margin-bottom: 25px; }
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--gh-muted);
+}
+
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #fafafa;
+    border: 1px solid var(--gh-border);
+    color: var(--gh-heading);
+    padding: 12px;
+    border-radius: 6px;
+    font-family: inherit;
+    resize: vertical;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: var(--gh-accent);
+    box-shadow: 0 0 0 3px rgba(9, 105, 218, 0.1);
+}
+
+button {
+    background-color: var(--gh-accent);
+    color: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 12px 24px;
+    font-size: 1em;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+button:hover { background-color: var(--gh-accent-hover); }
+button:disabled { background-color: #94bdec; cursor: not-allowed; color: white; }
+
+#status-panel { display: none; }
+
+#loading-indicator {
+    color: var(--gh-accent);
+    font-family: var(--mono-font);
+    font-size: 0.9em;
+    background-color: rgba(9, 105, 218, 0.05);
+    padding: 15px;
+    border-radius: 6px;
+    border-left: 3px solid var(--gh-accent);
+}
+
+/* AI Master Report Formatting */
+.ai-report-container, .ai-reply-panel {
+    background-color: var(--gh-bg-main);
+    border: 1px solid var(--gh-border);
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 20px;
+}
+
+.ai-report-container h2#ai-diagnosis {
+    color: var(--gh-heading);
+    font-weight: 600;
+    margin-top: 0;
+    border-bottom: 1px solid var(--gh-border);
+    padding-bottom: 10px;
+}
+
+.triage-panel {
+    border: 1px solid var(--gh-border);
+    background-color: #fcfcfc;
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.ai-report-container h3, .ai-reply-panel h3 { margin-top: 0; font-size: 1.1em; color: var(--gh-muted); }
+
+/* Monospace for technical data, standard font for normal text */
+.triage-panel pre, .ai-reply-panel pre {
+    font-family: var(--mono-font);
+    font-size: 0.95em;
+    white-space: pre-wrap;
+    background: #f6f8fa;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+/* Formatting for the requested Links */
+a {
+    color: var(--gh-accent);
+    text-decoration: none;
+    font-weight: 500;
+}
+a:hover { text-decoration: underline; }
+
+/* Follow-up Chat UI */
+.user-chat-bubble {
+    background-color: #e6f3ff;
+    border: 1px solid #bde0fe;
+    border-radius: 8px 8px 8px 0px;
+    padding: 15px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: var(--gh-heading);
+}
+
+.follow-up-panel h3 {
+    margin-top: 0;
+    font-size: 1.2em;
+}
+
+.error-panel {
+    color: #cf222e;
+    background-color: #ffebe9;
+    border: 1px solid #ff8182;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}

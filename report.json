@@ -1,0 +1,24 @@
+{
+    "timestamp": "2026-04-26 22:07:40.960171",
+    "system": {
+        "os": "Windows",
+        "os_release": "11",
+        "architecture": "AMD64"
+    },
+    "cpu": {
+        "physical_cores": 6,
+        "total_cores": 12,
+        "current_usage_percent": 16.5
+    },
+    "memory": {
+        "total_gb": 31.9,
+        "available_gb": 21.84,
+        "used_percent": 31.5
+    },
+    "disk": {
+        "drive_path": "C:\\",
+        "total_gb": 953.75,
+        "free_gb": 468.19,
+        "used_percent": 50.9
+    }
+}
